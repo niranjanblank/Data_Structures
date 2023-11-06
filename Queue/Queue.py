@@ -35,7 +35,7 @@ if __name__ == '__main__':
     queue.enqueue('Lewis')
     queue.enqueue('Lando')
     queue.enqueue('Perez')
-    print(queue.get_queue())
+    print(f'Items in Queue: {queue.get_queue()}')
     print(f"{queue.dequeue()} removed from the queue")
     print(f"{queue.dequeue()} removed from the queue")
     print(queue.get_queue())
