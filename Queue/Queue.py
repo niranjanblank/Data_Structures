@@ -18,7 +18,10 @@ class Queue:
 
     def is_empty(self):
         """ check if the queue is empty"""
-        return len(self.items) == 0
+        if not self.is_empty():
+            return self.items.pop(0)
+        else:
+            return "Queue is empty"
 
     def get_queue(self):
         """ get all the items in the queue """
