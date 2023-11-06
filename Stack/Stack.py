@@ -1,10 +1,10 @@
-class Stack():
+class Stack:
     """
     Stack Implementation
     """
     def __init__(self):
         """
-        Initialize a empty stack
+        Initialize empty stack
         """
         self.items = []
 
