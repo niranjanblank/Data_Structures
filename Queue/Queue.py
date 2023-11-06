@@ -31,10 +31,10 @@ class Queue:
 
 if __name__ == '__main__':
     queue = Queue()
-    queue.enqueue(1)
-    queue.enqueue(5)
-    queue.enqueue(23)
-    queue.enqueue(45)
+    queue.enqueue('Max')
+    queue.enqueue('Lewis')
+    queue.enqueue('Lando')
+    queue.enqueue('Perez')
     print(queue.get_queue())
     print(f"{queue.dequeue()} removed from the queue")
     print(f"{queue.dequeue()} removed from the queue")
