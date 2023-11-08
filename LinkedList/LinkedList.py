@@ -12,6 +12,8 @@ class Node:
 
 class LinkedList:
     def __init__(self):
+        self.head = None
+        self.tail = None
         self.items = []
 
     def __str__(self):
@@ -21,11 +23,11 @@ class LinkedList:
         return len(self.items)
 
     def append(self, node: Node):
-        if self.items:
-            self.items[-1].next = node
-            self.items.append(node)
-            return
-        self.items.append(node)
+        if not self.head:
+            self.head = self.tail = node
+        else:
+            self.tail.next = node
+            self.tail = node
 
 
 if __name__ == "__main__":
@@ -39,7 +41,7 @@ if __name__ == "__main__":
     linked_list.append(node2)
     linked_list.append(node3)
     linked_list.append(node4)
-    item = linked_list.items[0]
+    item = linked_list.head
 
     while item.next:
         print(f"Current Data: {item.data}, Next Data: {item.next.data}")
