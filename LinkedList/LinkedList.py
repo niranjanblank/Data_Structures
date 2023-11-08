@@ -29,6 +29,13 @@ class LinkedList:
             self.tail.next = node
             self.tail = node
 
+    def prepend(self, node: Node):
+        if not self.head:
+            self.head = self.tail = node
+        else:
+            node.next = self.head
+            self.head = node
+
 
 if __name__ == "__main__":
     linked_list = LinkedList()
@@ -39,7 +46,7 @@ if __name__ == "__main__":
 
     linked_list.append(node1)
     linked_list.append(node2)
-    linked_list.append(node3)
+    linked_list.prepend(node3)
     linked_list.append(node4)
     item = linked_list.head
 
