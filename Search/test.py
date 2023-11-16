@@ -1,12 +1,27 @@
 from LinearSearch import linear_search
+from BinarySearch import binary_search
+from random import randint, choice
+
 import time
 
-if __name__ == "__main__":
-    items = [1, 2, 3, 4, 5, 23]
-    item_to_find = 57
-    print(f"Items:{items}")
-    print(f"Item to find: {items}")
+
+def evaluate_search(search='linear', items=[], item_to_find=None):
+    print(f"{'*' * 50}")
+    print(f'Search Type: {search}')
     st = time.perf_counter()
-    print(linear_search(items, item_to_find))
+    if search == "linear":
+        print(linear_search(items, item_to_find))
+    elif search == "binary":
+        print(binary_search(items, item_to_find))
     et = time.perf_counter()
-    print(f'Time Taken: {st-et} seconds')
+    print(f'Time Taken: {et - st} seconds')
+    print(f"{'*' * 50}")
+
+
+if __name__ == "__main__":
+    items = range(100000000,0,-1)
+    item_to_find = choice(items)
+    print(f"Number of Items:{len(items)}")
+    print(f"Item to find: {item_to_find}")
+    evaluate_search(search = 'linear', items=items, item_to_find=item_to_find)
+    evaluate_search(search = 'binary', items=items, item_to_find=item_to_find)

@@ -4,7 +4,7 @@ def linear_search(data_list, item_to_search):
     for item in data_list:
         if item == item_to_search:
 
-            return f"Item {item_to_search} found at index {index}"
+            return f"Item {item_to_search} found"
         index += 1
     return f"Item {item_to_search} not found"
 
