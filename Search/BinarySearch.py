@@ -15,4 +15,4 @@ def binary_search(data_list, item_to_search):
             return f"Item {item_to_search} found"
         i += 1
 
-    return f"Item {item_to_search}"
+    return f"Item {item_to_search} not found"
