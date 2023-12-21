@@ -6,3 +6,4 @@ def insertion_sort(items):
             items[j + 1] = items[j]
             j -= 1
         items[j + 1] = temp
+    return items
